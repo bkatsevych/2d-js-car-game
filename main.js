@@ -1,7 +1,7 @@
 const score = document.querySelector(".score");
 const startScreen = document.querySelector(".startScreen");
 const gameArea = document.querySelector(".gameArea");
-let player = {};
+let player = { speed: 5 };
 
 startScreen.addEventListener("click", start);
 
@@ -33,14 +33,33 @@ function start() {
     player.start = true;
     window.requestAnimationFrame(playGame);
     let car = document.createElement("div");
-    car.innerText = "player";
+    car.innerText = "Car";
     car.setAttribute("class", "car");
     gameArea.appendChild(car);
+    player.x = car.offsetLeft;
+    player.y = car.offsetTop;
+    console.log(player);
 }
 
 function playGame() {
     console.log("inplay");
+    let car = document.querySelector(".car");
     if (player.start) {
+        if (keys.ArrowUp) {
+            player.y -= player.speed;
+        }
+        if (keys.ArrowDown) {
+            player.y += player.speed;
+        }
+        if (keys.ArrowLeft) {
+            player.x -= player.speed;
+        }
+        if (keys.ArrowRight) {
+            player.x += player.speed;
+        }
+
+        car.style.left = player.x + "px";
+        car.style.top = player.y + "px";
         window.requestAnimationFrame(playGame);
     }
 }
