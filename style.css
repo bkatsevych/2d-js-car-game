@@ -1,3 +1,9 @@
+html,
+body,
+.game {
+    height: 100%;
+}
+
 .hide {
     display: none;
 }
@@ -9,4 +15,22 @@
     width: 50px;
     height: 100px;
     background-color: blue;
+}
+
+.gameArea {
+    background-color: black;
+    width: 200px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+}
+
+.line {
+    position: absolute;
+    height: 100px;
+    width: 10px;
+    margin: auto;
+    background-color: white;
+    margin-left: 95px;
 }
