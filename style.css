@@ -38,9 +38,20 @@ body,
 
 .score {
     background-color: black;
-    height: 60px;
+    height: 100px;
+    width: 300px;
     text-align: center;
     color: white;
     font-size: 2em;
     font-family: fantasy;
+    margin: auto;
+    padding: 15px;
+}
+
+.startScreen {
+    text-align: center;
+    border: 1px solid red;
+    padding: 15px;
+    margin: auto;
+    width: 300px;
 }
