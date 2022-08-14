@@ -35,3 +35,12 @@ body,
     background-color: white;
     margin-left: 95px;
 }
+
+.score {
+    background-color: black;
+    height: 60px;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    font-family: fantasy;
+}
